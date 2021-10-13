@@ -57,3 +57,8 @@ Cypress.Commands.add('click_xPath', (nombreControl,tiempo) => {
     cy.xpath(nombreControl).should("be.visible").click({force:true})
     cy.wait(tiempo)
 })
+
+Cypress.Commands.add('Pantalla_Nomina', (nombreControl,tiempo) => {
+    cy.get(nombreControl).should("be.visible").click({force:true})
+    cy.wait(tiempo)
+})

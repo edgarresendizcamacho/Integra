@@ -41,7 +41,7 @@ para subir un solo archivo
 9.- git commit -m "Nombre de control de cambios"
 
 para subir tu proyecto a git
-1.- git remote add origin https://github.com/edgarresendizcamacho/IntegraS3.git
+1.- git remote add origin https://github.com/edgarresendizcamacho/Integra.git
 2.- git branch -M master //cambiar el main por el master
 3.- git push -u origin master //cambiar el main por el master
 
@@ -53,5 +53,9 @@ recorar que primero se tiene que agregar
 
 //este comando es para poder sincorizar los cambios que se hicieron en github
 5.- git pull 
+
+
+para realizar integracion continua
+1.- npx cypress run --record --key 84781462-61f8-4bce-9d41-d6b09d4a66c2
 
 
