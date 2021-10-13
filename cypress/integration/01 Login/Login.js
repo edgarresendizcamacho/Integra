@@ -11,12 +11,6 @@ describe("Login", () =>{
         cy.login("https://integras3qa.lennken.com/Default.aspx", "0000333", "$000033$")
     })
 
-    it("Usuario no valido", () =>{
-        let tiempo = 1000
-        cy.login("https://integras3qa.lennken.com/Default.aspx", "0000333", "$000033$")
-          
-    })
-   
     it.only("Cambio de contraseña", () =>{
         let tiempo = 1000
         //se ejecuta el before
@@ -26,7 +20,7 @@ describe("Login", () =>{
 
         //buscar por xpath (recuerda que se tiene que agregar la libreria require('cypress-xpath') )
         cy.frameLoaded('#dialog-body')
-        cy.iframe().find("#ctl00_cphPrincipal_txtUserNamePasswordLast1").should("be.visible").type("Hola")
+        cy.iframe().find("#ctl00_cphPrincipal_txtUserNamePasswordLast").should("be.visible").type("Hola")
         cy.iframe().find("#ctl00_cphPrincipal_txtUserNamePassword").should("be.visible").type("adios")
         cy.iframe().find("#ctl00_cphPrincipal_Button1").should("be.visible").click()
         cy.iframe().wait(1500)
