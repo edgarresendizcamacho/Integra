@@ -1,0 +1,57 @@
+1.- Para inciar el proyecto en cypress
+
+npm init -y
+
+2.- Para instalar cypress en mi carpeta
+
+npm install cypress --save-dev
+
+3.- Para iniciar cypress
+
+npx cypress open
+
+4.- instalar xpath
+
+npm install -D cypress-xpath
+
+5.- instalar iframe
+
+npm install -D cypress-iframe
+
+para utilizar git
+
+1.- git init
+
+para agregar todo al repositorio de git
+2.- git add .
+
+para ver que tenemos pendiente de subir
+3.- git status
+
+para subir a git la version  y los cambios que se ralizaron
+4.- git commit -m "Inicio del proyecto IntegraS3"
+
+para recuperar los elelemtnos que se eliminaron
+5.- git checkout -- .
+
+para subir un solo archivo
+6.- git add .\nombre del archivo
+7.- git add *.xlsx
+8.- git add .\carpeta\
+9.- git commit -m "Nombre de control de cambios"
+
+para subir tu proyecto a git
+1.- git remote add origin https://github.com/edgarresendizcamacho/IntegraS3.git
+2.- git branch -M master //cambiar el main por el master
+3.- git push -u origin master //cambiar el main por el master
+
+para subir los archvios que se estan editando o agragando
+recorar que primero se tiene que agregar
+1.- git add .
+2.- git commit -m "Nombre del cambio"
+4.- git push
+
+//este comando es para poder sincorizar los cambios que se hicieron en github
+5.- git pull 
+
+
