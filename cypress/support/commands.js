@@ -62,3 +62,22 @@ Cypress.Commands.add('Pantalla_Nomina', (nombreControl,tiempo) => {
     cy.get(nombreControl).should("be.visible").click({force:true})
     cy.wait(tiempo)
 })
+
+Cypress.Commands.add('Proceso_Nomina', (empresaPagadora,tipoNomina,tiempo) => {
+
+    //buscar por algun atributo el control
+    cy.get("#ctl00_cphPrincipal_repeaterModulo_ctl03_lnkModulo").should("be.visible").click()
+    cy.get(":nth-child(2) > .rmRootLink > .rmText").should("be.visible").click()
+    cy.get(":nth-child(1) > .rmExpand > .rmText").should("be.visible").click()
+    cy.xpath("(//a[contains(@class,'rmLink')])[2]").should("be.visible").click()
+    
+    cy.get("#ctl00_cphToolbar_dropEmpresaContrato").select([empresaPagadora])
+    cy.wait(1000)
+    cy.get("#ctl00_cphPrincipal_dropTipoNomina").select([tipoNomina])
+    cy.wait(1000)
+    cy.get("#ctl00_cphPrincipal_btnAction").should("be.visible").click()
+    cy.wait(1000)
+    cy.get("#ctl00_cphPrincipal_gvControl_ctl02_lblCalcular").should("be.visible").click()
+    cy.wait(1000)
+    cy.get("#ctl00_cphPrincipal_btnAction").should("be.visible").click()
+})
