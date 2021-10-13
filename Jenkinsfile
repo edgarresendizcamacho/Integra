@@ -38,7 +38,7 @@ pipeline {
                         label "Integra_Agente3"
                     }
                     steps {
-                        git url: 'https://github.com/edgarresendizcamacho/Paralelo_pipeline.git'
+                        git url: 'https://github.com/edgarresendizcamacho/Integra.git'
                         bat 'npm install'
                         bat 'npm update'                       
                         bat 'npx cypress run cypress run --record --key 84781462-61f8-4bce-9d41-d6b09d4a66c2  --parallel'
